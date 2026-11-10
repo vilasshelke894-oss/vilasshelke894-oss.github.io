@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vijay | Personal Website</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.7;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #f5f5f5;
+}
+
+nav {
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dark nav {
+  background: #1d1d1d;
+  border-color: #333;
+}
+
+nav h2 {
+  font-size: 22px;
+}
+
+nav button {
+  border: none;
+  background: #222;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px;
+  background: #f5f7fa;
+}
+
+.dark .hero {
+  background: #202020;
+}
+
+.profile {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  background: #ddd;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #777;
+}
+
+.dark .hero p {
+  color: #bbb;
+}
+
+.photo-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 9px 17px;
+  background: #222;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+section {
+  max-width: 750px;
+  margin: auto;
+  padding: 40px 22px;
+}
+
+section h2 {
+  font-size: 25px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.dark section h2 {
+  border-color: #444;
+}
+
+section p {
+  font-size: 17px;
+}
+
+.skill {
+  background: #f5f6f8;
+  padding: 14px;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 0.3s;
+}
+
+.dark .skill {
+  background: #252525;
+}
+
+.skill:hover {
+  transform: translateX(7px);
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 8px 5px 8px 0;
+  background: #222;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+  background: #444;
+}
+
+.whatsapp {
+  background: #168c52;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #f5f7fa;
+  color: #777;
+}
+
+.dark footer {
+  background: #202020;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: 0.7s;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(max-width: 500px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+  nav {
+    padding: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Vijay.</h2>
+  <button onclick="toggleTheme()">🌙 Theme</button>
+</nav>
+
+<header class="hero">
+
+  <img
+    id="profile"
+    class="profile"
+    src=""
+    alt="Vijay profile photo"
+  >
+
+  <h1>Hello, I'm Vijay</h1>
+
+  <p>Welcome to My Personal Website</p>
+
+  <label class="photo-btn">
+    📷 Add My Photo
+    <input
+      type="file"
+      accept="image/*"
+      hidden
+      onchange="changePhoto(event)"
+    >
+  </label>
+
+</header>
+
+<section class="reveal">
+  <h2>👋 About Me</h2>
+
+  <p>
+    Hello! My name is Vijay.
+    I have skills related to mobile technology
+    and troubleshooting.
+
+    I enjoy helping people solve their
+    mobile-related problems and making
+    technology easier for everyone.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>💻 My Skills</h2>
+
+  <div class="skill">📱 Mobile Settings</div>
+
+  <div class="skill">📲 App Problems</div>
+
+  <div class="skill">⚡ Phone Hanging / Slow</div>
+
+  <div class="skill">🌐 Internet / Network Problems</div>
+
+  <div class="skill">⚙️ Software Problems</div>
+
+  <div class="skill">💾 Data Backup / Recovery</div>
+
+  <div class="skill">🔒 Phone Security</div>
+
+</section>
+
+<section class="reveal">
+  <h2>❤️ My Hobbies</h2>
+
+  <p>📚 Teaching and Learning</p>
+
+</section>
+
+<section class="reveal">
+  <h2>📞 Contact Me</h2>
+
+  <p>Phone: 7350492687</p>
+
+  <p>Email: vilasshelke894@gmail.com</p>
+
+  <a class="contact-btn whatsapp"
+     href="https://wa.me/917350492687"
+     target="_blank">
+     WhatsApp Me
+  </a>
+
+  <a class="contact-btn"
+     href="mailto:vilasshelke894@gmail.com">
+     Send Email
+  </a>
+
+  <a class="contact-btn"
+     href="tel:7350492687">
+     Call Me
+  </a>
+
+</section>
+
+<footer>
+  <p>© 2026 Vijay | Personal Website</p>
+  <p>Made with ❤️ by Vijay</p>
+</footer>
+
+<script>
+
+// Dark and Light Mode
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
+// Add Profile Photo
+function changePhoto(event) {
+  const file = event.target.files[0];
+
+  if (file && file.type.startsWith("image/")) {
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      document.getElementById("profile").src =
+        e.target.result;
+    };
+
+    reader.readAsDataURL(file);
+  }
+}
+
+// Scroll Animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
