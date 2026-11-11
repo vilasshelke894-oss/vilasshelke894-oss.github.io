@@ -1,0 +1,412 @@
+index.html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>Vijay About | Official Website</title>
+<meta name="description" content="Welcome to Vijay About - Personal Website, Mobile Help and Technology Solutions.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ background:#090909;
+ color:#fff;
+ font-family:Arial,sans-serif;
+ line-height:1.6;
+}
+:root{--gold:#dfb957;--dark:#111}
+header{
+ position:sticky;top:0;z-index:10;
+ background:#101010;
+ border-bottom:1px solid #55421d;
+ padding:15px 6%;
+ display:flex;justify-content:space-between;
+ align-items:center;flex-wrap:wrap;gap:12px;
+}
+.logo{font-size:23px;font-weight:bold;color:var(--gold)}
+nav{display:flex;gap:17px;flex-wrap:wrap}
+nav a{color:#eee;text-decoration:none;font-size:13px}
+nav a:hover{color:var(--gold)}
+section{padding:65px 7%;scroll-margin-top:80px}
+.hero{
+ min-height:85vh;
+ display:flex;flex-direction:column;
+ justify-content:center;align-items:center;
+ text-align:center;
+ background:radial-gradient(ellipse at top,#30230d,#090909 65%);
+}
+.profile{
+ width:155px;height:155px;
+ object-fit:cover;border-radius:50%;
+ border:3px solid var(--gold);
+ padding:5px;
+ margin-bottom:20px;
+}
+h1{font-size:clamp(35px,8vw,58px);color:var(--gold)}
+h2{font-size:30px;color:var(--gold);margin-bottom:18px}
+h3{color:var(--gold);margin:15px 0 8px}
+p{color:#ccc;margin:10px 0}
+.gold{color:var(--gold)}
+.btn{
+ display:inline-block;
+ background:var(--gold);
+ color:#111;
+ text-decoration:none;
+ padding:12px 23px;
+ border-radius:7px;
+ font-weight:bold;
+ margin:10px 5px;
+}
+.btn-outline{
+ border:1px solid var(--gold);
+ color:var(--gold);
+ background:transparent;
+}
+.container{max-width:950px;margin:auto}
+.card{
+ background:#141414;
+ border:1px solid #5a4825;
+ border-radius:12px;
+ padding:20px;
+ margin:13px 0;
+}
+.skills-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:15px;
+}
+.skill{
+ background:#141414;
+ border:1px solid #725a2a;
+ padding:18px;
+ border-radius:11px;
+ cursor:pointer;
+}
+.skill:hover{background:#211b10}
+.skill summary{
+ list-style:none;
+ color:var(--gold);
+ font-weight:bold;
+ font-size:17px;
+}
+.skill summary::-webkit-details-marker{display:none}
+.skill summary:after{content:"＋";float:right}
+.skill[open] summary:after{content:"−"}
+.skill-content{
+ border-top:1px solid #55421d;
+ margin-top:15px;padding-top:12px;
+ color:#ddd;
+}
+.skill-content li{margin:8px 0 8px 18px}
+.search{
+ width:100%;padding:14px;
+ border:1px solid var(--gold);
+ border-radius:8px;
+ background:#151515;color:white;
+ font-size:16px;margin:20px 0;
+}
+.social a{
+ display:inline-block;
+ color:var(--gold);
+ border:1px solid #80652e;
+ border-radius:7px;
+ padding:9px 15px;
+ text-decoration:none;
+ margin:5px;
+}
+footer{
+ border-top:1px solid #55421d;
+ text-align:center;padding:25px;
+ color:#aaa;background:#101010;
+}
+.note{
+ background:#211b10;padding:12px;
+ border-left:3px solid var(--gold);
+ border-radius:5px;
+ font-size:13px;
+}
+@media(max-width:500px){
+ header{justify-content:center}
+ nav{justify-content:center}
+ section{padding:48px 5%}
+ .hero{min-height:75vh}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="logo">VIJAY ABOUT</div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">My Skills</a>
+  <a href="#contact">Contact</a>
+ </nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+ <img class="profile"
+ src="IMG-20260731-WA0010.jpg"
+ alt="Vijay Profile Photo"
+ onerror="this.style.display='none'">
+
+ <p class="gold">WELCOME TO MY OFFICIAL WEBSITE</p>
+ <h1>I'm Vijay</h1>
+ <p>Technology | Learning | Creativity</p>
+ <p>Welcome to my personal website.</p>
+
+ <div>
+  <a href="#about" class="btn">About Me</a>
+  <a href="#skills" class="btn btn-outline">Explore Skills</a>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+ <div class="container">
+  <h2>About Me</h2>
+  <div class="card">
+   <h3>Hello, I'm Vijay!</h3>
+   <p>
+    Welcome to Vijay About. This is my personal
+    and official website where I share my interests,
+    skills, technology knowledge and helpful information.
+   </p>
+   <p>
+    My goal is to learn new things, improve my skills
+    and share useful knowledge with everyone.
+   </p>
+  </div>
+ </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+ <div class="container">
+  <h2>My Skills & Services</h2>
+  <p>Choose a topic to explore its information and solutions.</p>
+
+  <input class="search" id="search"
+  type="search" placeholder="Search your problem..."
+  oninput="searchSkills()">
+
+  <div class="skills-grid" id="skillsGrid">
+
+   <details class="skill">
+    <summary>📲 Mobile Settings</summary>
+    <div class="skill-content">
+     <h3>Display Settings</h3>
+     <ul>
+      <li>Brightness and Screen Timeout</li>
+      <li>Dark Mode and Font Size</li>
+      <li>Wallpaper and Home Screen</li>
+     </ul>
+     <h3>Battery Settings</h3>
+     <ul>
+      <li>Battery Saver</li>
+      <li>Battery Usage</li>
+      <li>Background App Settings</li>
+     </ul>
+     <h3>Other Settings</h3>
+     <ul>
+      <li>App Permissions</li>
+      <li>Keyboard and Language</li>
+      <li>Wi-Fi and Bluetooth</li>
+      <li>Developer Options</li>
+     </ul>
+    </div>
+   </details>
+
+   <details class="skill">
+    <summary>📲 App Problems</summary>
+    <div class="skill-content">
+     <h3>Common Problems</h3>
+     <ul>
+      <li>App Not Opening</li>
+      <li>App Crashing</li>
+      <li>App Not Installing</li>
+      <li>Play Store Download Problems</li>
+      <li>Login and Notification Problems</li>
+     </ul>
+     <h3>Solutions</h3>
+     <ol>
+      <li>Check Internet Connection.</li>
+      <li>Restart Your Phone.</li>
+      <li>Update the App.</li>
+      <li>Clear App Cache.</li>
+      <li>Contact Official App Support.</li>
+     </ol>
+     <p class="note">Clear Data करने से पहले अपना जरूरी App Data सुरक्षित रखें।</p>
+    </div>
+   </details>
+
+   <details class="skill">
+    <summary>⚡ Phone Hanging / Slow</summary>
+    <div class="skill-content">
+     <h3>Common Problems</h3>
+     <ul>
+      <li>Phone Hanging</li>
+      <li>Slow Performance</li>
+      <li>Storage Full</li>
+      <li>Phone Heating</li>
+      <li>Battery Draining</li>
+     </ul>
+     <h3>Solutions</h3>
+     <ol>
+      <li>Delete Unnecessary Files.</li>
+      <li>Uninstall Unused Apps.</li>
+      <li>Restart Your Phone.</li>
+      <li>Update Apps and Software.</li>
+      <li>Keep Enough Free Storage.</li>
+     </ol>
+    </div>
+   </details>
+
+   <details class="skill">
+    <summary>🌐 Internet / Network Problems</summary>
+    <div class="skill-content">
+     <h3>Common Problems</h3>
+     <ul>
+      <li>Mobile Data Not Working</li>
+      <li>Slow Internet Speed</li>
+      <li>Wi-Fi Connection Problem</li>
+      <li>SIM Network Problem</li>
+      <li>Hotspot Not Working</li>
+     </ul>
+     <h3>Solutions</h3>
+     <ol>
+      <li>Turn Airplane Mode On and Off.</li>
+      <li>Check Network Signal.</li>
+      <li>Restart Your Phone.</li>
+      <li>Reconnect Wi-Fi.</li>
+      <li>Contact Your Network Operator.</li>
+     </ol>
+    </div>
+   </details>
+
+   <details class="skill">
+    <summary>⚙️ Software Problems</summary>
+    <div class="skill-content">
+     <h3>Common Problems</h3>
+     <ul>
+      <li>Software Update Error</li>
+      <li>Phone Restart Problem</li>
+      <li>System Bugs</li>
+      <li>Android Version Check</li>
+      <li>Safe Mode</li>
+     </ul>
+     <h3>Solutions</h3>
+     <ol>
+      <li>Check Available Storage.</li>
+      <li>Use Stable Internet.</li>
+      <li>Check Official Updates.</li>
+      <li>Take Backup Before Updating.</li>
+      <li>Contact Authorized Service Center.</li>
+     </ol>
+     <p class="note">Factory Reset करने से फोन का Data मिट सकता है। पहले Backup लें।</p>
+    </div>
+   </details>
+
+   <details class="skill">
+    <summary>💾 Data Backup / Recovery</summary>
+    <div class="skill-content">
+     <h3>Backup</h3>
+     <ul>
+      <li>Google Photos Backup</li>
+      <li>Google Contacts Backup</li>
+      <li>WhatsApp Backup</li>
+      <li>Google Drive Backup</li>
+      <li>Phone to Phone Transfer</li>
+     </ul>
+     <h3>Recovery</h3>
+     <ol>
+      <li>Check Google Photos Trash.</li>
+      <li>Check Contacts Trash.</li>
+      <li>Check WhatsApp Backup.</li>
+      <li>Check Backup Date Before Restore.</li>
+     </ol>
+     <p class="note">Deleted Data हमेशा Recover नहीं हो सकता।</p>
+    </div>
+   </details>
+
+   <details class="skill">
+    <summary>🔒 Phone Security</summary>
+    <div class="skill-content">
+     <h3>Security Features</h3>
+     <ul>
+      <li>Screen Lock and Password</li>
+      <li>Fingerprint and Face Unlock</li>
+      <li>App Lock and Permissions</li>
+      <li>Google Account Security</li>
+      <li>Two-Step Verification</li>
+      <li>Virus and Malware Protection</li>
+     </ul>
+     <h3>Safety Tips</h3>
+     <ol>
+      <li>Use a Strong Screen Lock.</li>
+      <li>Never Share Your OTP.</li>
+      <li>Avoid Unknown APK Files.</li>
+      <li>Enable Google Play Protect.</li>
+      <li>Keep Your Phone Updated.</li>
+     </ol>
+    </div>
+   </details>
+
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+ <div class="container">
+  <h2>Contact Me</h2>
+  <div class="card">
+   <p>Want to connect with me?</p>
+   <p>You can add your official social media links here.</p>
+   <div class="social">
+    <a href="#" target="_blank">Instagram</a>
+    <a href="#" target="_blank">YouTube</a>
+    <a href="#" target="_blank">Facebook</a>
+   </div>
+   <p class="note">अपने असली Social Media Links बाद में यहाँ लगाएँ।</p>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="gold"><b>VIJAY ABOUT</b></div>
+ <p>Technology Made Simple.</p>
+ <p>© 2026 Vijay About. All Rights Reserved.</p>
+</footer>
+
+<script>
+function searchSkills(){
+ const query=document.getElementById("search")
+ .value.toLowerCase().trim();
+
+ document.querySelectorAll("#skillsGrid details")
+ .forEach(function(item){
+  const match=item.innerText.toLowerCase()
+  .includes(query);
+
+  item.style.display=match?"":"none";
+
+  if(query && match){
+   item.open=true;
+  }else if(!query){
+   item.open=false;
+  }
+ });
+}
+</script>
+
+</body>
+</html>
