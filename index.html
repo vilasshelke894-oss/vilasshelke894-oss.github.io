@@ -438,6 +438,155 @@ function searchSkills(){
 .call { background: #2196F3; }
 .whatsapp { background: #25D366; }
 </style>
+ 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jio Network Help</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef3ff;
+  color: #222;
+}
+header {
+  background: #0755c9;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px #0001;
+}
+h2 {
+  color: #0755c9;
+}
+button {
+  background: #0755c9;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+}
+code {
+  background: #e5edff;
+  padding: 8px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 17px;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Jio Network Help</h1>
+  <p>Internet Problem Solution</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>📶 Internet नहीं चल रहा?</h2>
+<p>इन स्टेप्स को एक-एक करके फॉलो करें।</p>
+<p>1. Airplane Mode 30 सेकंड ON करें।</p>
+<p>2. फिर OFF करें।</p>
+<p>3. मोबाइल Restart करें।</p>
+<p>4. Mobile Data ON करें।</p>
+</div>
+
+<div class="card">
+<h2>⚙️ Jio APN Setting</h2>
+<p>Name: Jio Internet</p>
+<p>APN:</p>
+<code>jionet</code>
+<button onclick="copyAPN()">Copy APN</button>
+</div>
+
+<div class="card">
+<h2>📱 Network Setting</h2>
+<p>Settings → SIM Card → Jio</p>
+<p>Preferred Network Type → 4G/5G Auto</p>
+<p>Network Selection → Automatic</p>
+</div>
+
+<div class="card">
+<h2>🔍 समस्या पहचानें</h2>
+<button onclick="check('4G दिख रहा है लेकिन नेट नहीं चल रहा')">
+4G है लेकिन इंटरनेट नहीं
+</button>
+<button onclick="check('कॉल भी नहीं लग रही')">
+कॉल भी नहीं लग रही
+</button>
+<button onclick="check('नेटवर्क सिग्नल नहीं आ रहे')">
+सिग्नल नहीं आ रहे
+</button>
+<p id="result"></p>
+</div>
+
+<div class="card">
+<h2>☎️ Jio Customer Care</h2>
+<p>Jio नंबर से 199 पर कॉल करें।</p>
+<p>या MyJio App में Support देखें।</p>
+</div>
+
+</div>
+
+<footer>
+<p>Made with ❤️ | Network Help</p>
+</footer>
+
+<script>
+function copyAPN() {
+  navigator.clipboard.writeText("jionet")
+  .then(() => alert("APN copied: jionet"))
+  .catch(() => alert("APN: jionet"));
+}
+
+function check(problem) {
+  let result = document.getElementById("result");
+
+  if(problem.includes("4G")) {
+    result.innerHTML =
+    "APN, Data Balance और Jio Network Outage चेक करें।";
+  } else if(problem.includes("कॉल")) {
+    result.innerHTML =
+    "SIM और Network Registration चेक करें। Jio Support से संपर्क करें।";
+  } else {
+    result.innerHTML =
+    "Airplane Mode ON/OFF करें और Network Selection Automatic रखें।";
+  }
+}
+</script>
+
+</body>
+</html>
+ 
 
 </body>
 </html>
